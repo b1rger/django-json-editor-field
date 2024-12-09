@@ -5,11 +5,11 @@ from django_json_editor_field.widgets import JSONEditorWidget
 
 
 class JSONEditorField(models.JSONField):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, blank=True, *args, **kwargs):
         self.options = kwargs.pop("options", {})
         if "schema" not in self.options.keys():
             self.options["schema"] = kwargs.pop("schema", {})
-        super().__init__(*args, **kwargs)
+        super().__init__(blank=blank, *args, **kwargs)
 
     def check(self, **kwargs):
         return [*super().check(**kwargs), *self._check_options()]
