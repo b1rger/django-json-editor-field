@@ -12,7 +12,9 @@ window.addEventListener('load', () => {
         input = element.getElementsByTagName('input')[0];
         editor = new JSONEditor(element, options);
         editor.on('ready', () => {
-            editor.setValue(JSON.parse(input.value));
+            if (JSON.parse(input.value)) {
+                editor.setValue(JSON.parse(input.value));
+            }
         });
         editor.on('change', () => {
             input = element.getElementsByTagName('input')[0];
