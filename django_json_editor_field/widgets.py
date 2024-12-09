@@ -14,11 +14,11 @@ class JSONEditorWidget(Input):
             "all": ["css/jsonwidget.css"],
         }
 
-    def __init__(self, schema={}, *args, **kwargs):
-        self.schema = schema
+    def __init__(self, options={}, *args, **kwargs):
+        self.options = options
         super().__init__(*args, **kwargs)
 
     def get_context(self, *args, **kwargs):
         ctx = super().get_context(*args, **kwargs)
-        ctx["schema"] = self.schema
+        ctx["options"] = self.options
         return ctx
