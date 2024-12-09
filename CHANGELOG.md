@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/b1rger/django-json-editor-field/compare/v0.2.0...v0.2.1) (2024-12-09)
+
+
+### Miscellaneous Chores
+
+* release 0.2.1 ([7afaa50](https://github.com/b1rger/django-json-editor-field/commit/7afaa5037ddafd65c2a8855802d394c835e946c5))
+
 ## 0.2.0 (2024-12-09)
 
 
