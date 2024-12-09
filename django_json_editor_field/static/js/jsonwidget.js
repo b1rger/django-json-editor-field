@@ -8,11 +8,9 @@ window.addEventListener('load', () => {
     JSONEditor.defaults.options.disable_array_delete_all_rows = true;
     JSONEditor.defaults.options.prompt_before_delete = false;
     document.querySelectorAll(".jsonfield").forEach(function(element) {
-        schema = JSON.parse(element.getElementsByTagName('script')[0].textContent);
+        options = JSON.parse(element.getElementsByTagName('script')[0].textContent);
         input = element.getElementsByTagName('input')[0];
-        editor = new JSONEditor(element, {
-            schema: schema,
-        });
+        editor = new JSONEditor(element, options);
         editor.on('ready', () => {
             editor.setValue(JSON.parse(input.value));
         });
