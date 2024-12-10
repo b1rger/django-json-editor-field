@@ -1,4 +1,4 @@
-<div class="jsonfield">
+<div>
+    {% include "django/forms/widgets/textarea.html" %}
     {{ options|json_script:"options" }}
-    {% include "django/forms/widgets/input.html" %}
 </div>

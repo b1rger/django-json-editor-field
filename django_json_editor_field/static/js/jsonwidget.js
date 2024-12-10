@@ -7,19 +7,19 @@ window.addEventListener('load', () => {
     JSONEditor.defaults.options.disable_array_delete_last_row = true;
     JSONEditor.defaults.options.disable_array_delete_all_rows = true;
     JSONEditor.defaults.options.prompt_before_delete = false;
-    document.querySelectorAll(".jsonfield").forEach(function(element) {
-        options = JSON.parse(element.getElementsByTagName('script')[0].textContent);
-        input = element.getElementsByTagName('input')[0];
-        editor = new JSONEditor(element, options);
+    document.querySelectorAll(".jsoneditorwidget").forEach(function(element) {
+        optionsContainer = element.nextElementSibling;
+        options = JSON.parse(optionsContainer.textContent);
+        editor = new JSONEditor(element.parentNode, options);
         editor.on('ready', () => {
-            if (JSON.parse(input.value)) {
-                editor.setValue(JSON.parse(input.value));
+            element.style.display = 'none';
+            if (JSON.parse(element.value)) {
+                editor.setValue(JSON.parse(element.value));
             }
         });
         editor.on('change', () => {
-            input = element.getElementsByTagName('input')[0];
-            if (input) {
-                input.value = JSON.stringify(editor.getValue());
+            if (element) {
+                element.value = JSON.stringify(editor.getValue());
             }
         });
     });
