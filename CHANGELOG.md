@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.0](https://github.com/b1rger/django-json-editor-field/compare/v0.3.0...v0.4.0) (2024-12-10)
+
+
+### Features
+
+* implement backend schema validation ([893b39a](https://github.com/b1rger/django-json-editor-field/commit/893b39ab38fd526fa7a0da79445ff5274b719baa))
+* loose the custom default settings ([82517f2](https://github.com/b1rger/django-json-editor-field/commit/82517f29c4134b40127faf70821006e8c990daee))
+
+
+### Documentation
+
+* add more information to the readme ([1f207a4](https://github.com/b1rger/django-json-editor-field/commit/1f207a465e672f919ee9229db0112b8bfd042be8))
+
 ## [0.3.0](https://github.com/b1rger/django-json-editor-field/compare/v0.2.1...v0.3.0) (2024-12-10)
 
 
