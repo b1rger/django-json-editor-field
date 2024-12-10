@@ -1,8 +1,7 @@
-from django.forms.widgets import Input
+from django.forms.widgets import Textarea
 
 
-class JSONEditorWidget(Input):
-    input_type = "hidden"
+class JSONEditorWidget(Textarea):
     template_name = "widgets/json_editor_widget.html"
 
     class Media:
