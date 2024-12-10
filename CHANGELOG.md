@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://github.com/b1rger/django-json-editor-field/compare/v0.2.1...v0.3.0) (2024-12-10)
+
+
+### Features
+
+* use textarea template instead of input template ([20b7d41](https://github.com/b1rger/django-json-editor-field/commit/20b7d410535d7ddf1cc17a6f7ecd22e59bc6f478))
+
+
+### Bug Fixes
+
+* **field:** set field to allow blank values by default ([3c8b9db](https://github.com/b1rger/django-json-editor-field/commit/3c8b9db3fdd89773801cb8f6858efb75dc02836d))
+* **js:** only set value editor value if there is a value ([6613d63](https://github.com/b1rger/django-json-editor-field/commit/6613d6342ceb537b03967cb52e65cfe3e3036d6c))
+
 ## [0.2.1](https://github.com/b1rger/django-json-editor-field/compare/v0.2.0...v0.2.1) (2024-12-09)
 
 
