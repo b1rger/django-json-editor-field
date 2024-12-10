@@ -1,7 +1,10 @@
 from django.db import models
-from django.core import checks
+from django.core import checks, exceptions
 
 from django_json_editor_field.widgets import JSONEditorWidget
+
+from jsonschema import validate
+from jsonschema.exceptions import ValidationError
 
 
 class JSONEditorField(models.JSONField):
@@ -22,3 +25,10 @@ class JSONEditorField(models.JSONField):
     def formfield(self, *args, **kwargs):
         kwargs["widget"] = JSONEditorWidget(options=self.options)
         return super().formfield(*args, **kwargs)
+
+    def validate(self, value, model_instance):
+        super().validate(value, model_instance)
+        try:
+            validate(instance=value, schema=self.options["schema"])
+        except ValidationError as e:
+            raise exceptions.ValidationError(e.message)
