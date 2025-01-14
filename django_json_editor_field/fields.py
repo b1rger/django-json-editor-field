@@ -19,7 +19,12 @@ class JSONEditorField(models.JSONField):
 
     def _check_options(self):
         if not self.options.get("schema"):
-            return [checks.Error("JSONEditorFields must define a 'schema' attribute or an 'options' attribute with a 'schema' key", obj=self)]
+            return [
+                checks.Error(
+                    "JSONEditorFields must define a 'schema' attribute or an 'options' attribute with a 'schema' key",
+                    obj=self,
+                )
+            ]
         return []
 
     def formfield(self, *args, **kwargs):
