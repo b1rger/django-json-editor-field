@@ -9,7 +9,7 @@ from jsonschema.exceptions import ValidationError
 
 class JSONEditorField(models.JSONField):
     def __init__(self, blank=True, *args, **kwargs):
-        self.options = kwargs.pop("options", {})
+        self.options = dict(kwargs.pop("options", {}))
         if "schema" not in self.options.keys():
             self.options["schema"] = kwargs.pop("schema", {})
         super().__init__(blank=blank, *args, **kwargs)
