@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/b1rger/django-json-editor-field/compare/v0.4.0...v0.4.1) (2025-02-05)
+
+
+### Bug Fixes
+
+* **field:** copy the options dict so it does not get reused ([6af25e6](https://github.com/b1rger/django-json-editor-field/commit/6af25e6c5effd61c3f6dbc803d9d3013ca3a3b32))
+
 ## [0.4.0](https://github.com/b1rger/django-json-editor-field/compare/v0.3.0...v0.4.0) (2024-12-10)
 
 
