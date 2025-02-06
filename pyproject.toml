@@ -1,6 +1,6 @@
 [project]
 name = "django-json-editor-field"
-version = "0.4.1"
+version = "0.4.2"
 description = "JSON Editor support for Django JSON Fields"
 authors = [
   { name = "Birger Schacht", email = "birger.schacht@oeaw.ac.at" }
