@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
     document.querySelectorAll(".jsoneditorwidget").forEach(function(element) {
         optionsContainer = element.nextElementSibling;
         options = JSON.parse(optionsContainer.textContent);
-        editor = new JSONEditor(element.parentNode, options);
+        const editor = new JSONEditor(element.parentNode, options);
         editor.on('ready', () => {
             element.style.display = 'none';
             if (JSON.parse(element.value)) {
