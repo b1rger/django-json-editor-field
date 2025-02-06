@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/b1rger/django-json-editor-field/compare/v0.4.1...v0.4.2) (2025-02-06)
+
+
+### Bug Fixes
+
+* **js:** use const to always create a new editor element ([efc96d9](https://github.com/b1rger/django-json-editor-field/commit/efc96d9865f49c6d23c8a32b0bd3e20122ccdbed))
+
 ## [0.4.1](https://github.com/b1rger/django-json-editor-field/compare/v0.4.0...v0.4.1) (2025-02-05)
 
 
