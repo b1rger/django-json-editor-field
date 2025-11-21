@@ -21,4 +21,4 @@ jobs:
         with:
           release-type: python
           package-name: django-json-editor-field
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
